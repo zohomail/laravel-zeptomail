@@ -31,7 +31,7 @@ class ZeptoMailTransport implements TransportInterface
         $this->client = new HttpClient();
     }
 
-    public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage
+    public function send(RawMessage $message, ?Envelope $envelope = null): ?SentMessage
     {
         try{
             $urlToSend = $this->getEndpoint();
